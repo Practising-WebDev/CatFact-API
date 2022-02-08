@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="CatFact.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catfact Api</title>
+  </head>
+  <body>
+    <div>
+      <h1 style="background-color: aqua">
+        Get a Random Cat fact by Pressing the Paw
+      </h1>
+
+      <input id="button1" type="image" onclick="runClick()" src="cat-paw.png" name="submit" width="100" height="100" alt="submit"/>
+
+      <div id="factdiv"> Get your fact Here</div>
+    </div>
+  </body>
+
+  <script>
+    async function runClick() {
+      let getfact = await fetch('https://catfact.ninja/fact');
+      let convertedfact = await getfact.json();
+      document.getElementById("factdiv").innerHTML =convertedfact.fact;
+    }
+  </script>
+</html>

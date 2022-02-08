@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-image: url("cat-api-bg.jpg");
+}
+#factdiv{
+    width:1500px;
+    height:550px;
+    background-color: rgb(248, 231, 209);
+    color:rgb(224, 77, 77);
+    margin-top: 270px;
+    padding: 4px;
+    padding-top: 60px;
+    font-size: 25px;
+    }
+
+
+
+#button1:active {
+    transform: translateY(6px);
+}
